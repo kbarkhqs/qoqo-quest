@@ -5,12 +5,12 @@ authors = ["HQS Quantum Simulations <info@quantumsimulations.de>"]
 license = "Apache-2.0"
 edition = "2018"
 categories = ["science", "simulation"]
-readme = "../README.md"
+readme = "README.md"
 repository = "https://github.com/HQSquantumsimulations/qoqo-quest"
 homepage = "https://github.com/HQSquantumsimulations/qoqo-quest"
 documentation = "https://docs.rs/qoqo_quest/"
 description = "QuEST simulator for the qoqo quantum computing toolkit"
-include = ["src*", "LICENSE"]
+include = ["src*", "LICENSE", "README.md", "Cargo.toml"]
 
 [lib]
 name = "roqoqo_quest"
@@ -19,7 +19,7 @@ doctest = false
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-quest-sys = {version="0.2", path="../quest-sys", default-features=false}
+quest-sys = {version="0.3", path="../quest-sys", default-features=false}
 roqoqo = {version ="0.10", features=["serialize"]}
 
 qoqo_calculator = { version="0.6"}
@@ -29,7 +29,7 @@ rand = "0.8"
 ndarray="0.15"
 
 [dev-dependencies]
-test-case="1.2"
+test-case="2.0"
 criterion = "0.3"
 
 [features]
